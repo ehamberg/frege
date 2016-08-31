@@ -294,7 +294,7 @@ readonly  = Mutable.readonly
 mutable x = Mutable.Mutable x
  
 
---- They type for mostly mutable values that are tied to the 'IO' monad.
+--- The type for mostly mutable values that are tied to the 'IO' monad.
 {--
     For java types that are *mutable only* so that they always would occur 
     wrapped into 'MutableIO', the convention is to
@@ -311,11 +311,11 @@ mutable x = Mutable.Mutable x
     -}
 type MutableIO = Mutable RealWorld
 
---- They type of 'IO' actions that return a mutable value of type _d_
+--- The type of 'IO' actions that return a mutable value of type _d_
 --- This is an abbreviation for @ST RealWorld (Mutable RealWorld d)@ 
 type IOMutable d = IO (MutableIO d)
 
---- They type of 'ST' actions that return a mutable value of type _d_
+--- The type of 'ST' actions that return a mutable value of type _d_
 --- This is an abbreviation for @ST s (Mutable s d)@ 
 type STMutable s d = ST s (Mutable s d)
 
